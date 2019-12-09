@@ -3,12 +3,22 @@ name: Test UBSan CI
 on: [push]
 
 jobs:
-  build:
-
+  Ubuntu:
+    name: Run on ubuntu
     runs-on: ubuntu-latest
     
     steps:
     - uses: actions/checkout@v1
     - name: Build and Run
       run: bash build_run_gcc.sh
+     
+  macOS:
+    name: Run on macOS
+    runs-on: macOS-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build and Run
+      run: bash build_run_clang.sh
+      
 
