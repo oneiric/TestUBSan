@@ -1,4 +1,4 @@
-name: C/C++ CI
+name: Test UBSan CI
 
 on: [push]
 
@@ -10,5 +10,5 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Build and Run
-      run: ./build_run_gcc.sh
+      run: bash build_run_gcc.sh
 
